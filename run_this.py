@@ -10,7 +10,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 options = {
 	'model': 'cfg/yolo-face.cfg',
 	'load': 'yolo-face.weights',
-	'threshold': 0.204555,
+	'threshold': 0.244555,
 	'gpu': 1.0
 }
 tfnet = TFNet(options)
@@ -26,11 +26,12 @@ while True:
 	if ret:
 		results = tfnet.return_predict(frame)
 		for color, result in zip(colors, results):
-			process(color, result,frame)
+			times = str(datetime.datetime.now())
+			times = times[:22]	
+			process(color, result,frame, times)
 			cv2.imshow('frame', frame)
-			print(results)
+			save_txt(results, times)
 			print('FPS {:.1f}'.format(1 / (time.time() - stime)))
-			save_txt(results)
 			if cv2.waitKey(1) & 0xFF == ord('q'):
 				break
 cv2.destroyAllWindows()
