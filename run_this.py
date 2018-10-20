@@ -3,6 +3,7 @@ from darkflow.net.build import TFNet
 import numpy as np
 import time
 import os
+from picamera import PiCamera
 import json
 import datetime
 from save import process,save_txt
@@ -13,17 +14,22 @@ options = {
 	'threshold': 0.244555,
 	'gpu': 1.0
 }
+camera = PiCamera()
+camera.resolution = (618, 416)
 tfnet = TFNet(options)
 colors = [tuple(255 * np.random.rand(3)) for _ in range(10)]
 writer = None
+camera.start_preview()
+'''
 capture = cv2.VideoCapture(0)
 capture.set(cv2.CAP_PROP_FRAME_WIDTH, 618)
-capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 416)
+capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 416)'''
 videowriter = None
+
 while True:
 	stime = time.time()
-	ret, frame = capture.read()
-	if ret:
+	frame = PiRGBArray(camera, size=(618, 416))
+	if frame !=None:
 		results = tfnet.return_predict(frame)
 		for color, result in zip(colors, results):
 			times = str(datetime.datetime.now())
@@ -35,5 +41,4 @@ while True:
 			if cv2.waitKey(1) & 0xFF == ord('q'):
 				break
 cv2.destroyAllWindows()
-capture.release()
 writer.release()
