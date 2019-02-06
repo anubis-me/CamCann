@@ -5,6 +5,9 @@ from django.conf.urls import url
 urlpatterns = [
     url('^$', views.index, name='index'),
 #/collector/71/
-    url(r'^(?P<data_id>[0-9]+)', views.detail, name='detail')
+    url(r'^(?P<data_id>[0-9]+)', views.detail, name='detail'),
+
+    url(r'^create/', views.data_create_view, name='create'),
+
 ]
 
