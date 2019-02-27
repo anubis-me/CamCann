@@ -2,11 +2,11 @@ from django.db import models
 
 
 class Data(models.Model):
-    image_name = models.CharField(max_length=150, default="")
-    head_roll = models.CharField(max_length=150, default="")
-    head_yaw = models.CharField(max_length=150, default="")
-    camera = models.CharField(max_length=150, default="")
-    head_pitch = models.CharField(max_length=150, default="")
+    image_name = models.CharField(max_length=150, default="NA")
+    head_roll = models.CharField(max_length=150, default="NA")
+    head_yaw = models.CharField(max_length=150, default="NA")
+    camera = models.CharField(max_length=150, default="NA")
+    head_pitch = models.CharField(max_length=150, default="NA")
     Frame_Shape = models.CharField(max_length=150, default= [0,0,0])
     Age = models.IntegerField(default="NA")
     Image = models.CharField(max_length=150, default="images1")
