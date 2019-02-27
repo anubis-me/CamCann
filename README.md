@@ -2,15 +2,23 @@
 # CamCann
 
 On windows :
+
 Step1 : Clone the repositry 
 
 Step2: in terminal type : python manage.py runserver
 
 Step3: check local host/admin with 
+
+
 login : admin 
+
 password : hellocamcann
 
+
+Step4 : route for Data posting is "Localhost/collector/create"
+
 On Ubuntu :
+
 Step1 : make a virtual environment by running
 "virtualenv CamCann"
 
@@ -19,3 +27,12 @@ Step2 : activate the virutal environment by
 
 Step3 : Run the server by
 "python manage.py runserver your-server-ip:8000"
+
+
+login : admin 
+
+password : hellocamcann
+
+
+
+Step4 : route for Data posting is "Localhost/collector/create"
