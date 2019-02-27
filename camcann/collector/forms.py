@@ -14,6 +14,11 @@ class DataForm(forms.ModelForm):
             'head_yaw',
             'head_pitch',
             'head_roll',
-            'Timestamp'
+            'Timestamp',
+            'Location',
+            'Image',
+            'Frame_Shape'
+
+
 
         ]

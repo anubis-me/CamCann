@@ -12,7 +12,7 @@ class Data(models.Model):
     Image = models.CharField(max_length=150, default="images1")
     Gender = models.CharField(max_length=20, default="NA")
     Location = models.CharField(max_length=300, default="images/")
-    Timestamp = models.CharField(max_length=250, default="000000")
+    Timestamp = models.DateTimeField(max_length=250, default="000000")
 
     def __str__(self):
         return self.Image + '-' + self.Gender + '-' + str(self.Age)
