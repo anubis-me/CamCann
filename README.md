@@ -8,7 +8,7 @@ Step2: in terminal type : python manage.py runserver
 
 Step3: check local host/admin with 
 login : admin 
-password : Topare@2507
+password : hellocamcann
 
 On Ubuntu :
 Step1 : make a virtual environment by running
