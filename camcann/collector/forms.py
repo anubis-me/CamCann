@@ -11,14 +11,7 @@ class DataForm(forms.ModelForm):
             'Gender',
             'Age',
             'image_name',
-            'head_yaw',
-            'head_pitch',
-            'head_roll',
-            'Timestamp',
             'Location',
             'Image',
             'Frame_Shape'
-
-
-
         ]

@@ -13,7 +13,7 @@ SECRET_KEY = '%o!h=1(0i@mz0+k%y-xni)0i8&z1m&fxsbx=udrd^&p37z%axj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -26,6 +26,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_cron',
+    'channels'
 ]
 
 MIDDLEWARE = [
@@ -36,9 +38,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'collector.cors.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'camcann.urls'
+
+CRON_CLASSES = [
+    "collector.cron.SaveCSV","collector.cron.PlayAD","collector.cron.ReadTAG"
+]
 
 TEMPLATES = [
     {
@@ -64,8 +71,10 @@ WSGI_APPLICATION = 'camcann.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': '/etc/mysql/my.cnf',
+        },
     }
 }
 
@@ -107,3 +116,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "asgi_redis.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("127.0.0.1", 6379)],
+        },
+        "ROUTING": "collector.routing.channel_routing",
+    },
+}
+
+
