@@ -1,0 +1,705 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-family: 'Rajdhani', sans-serif;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+  font-size: 2rem;
+  font-weight: 500;
+  z-index: 10;
+  margin-bottom: 6rem;
+}
+
+.navbar a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-nav{
+  margin-left: 6rem;
+}
+
+.nav-item{
+  padding-left: 3rem;
+}
+
+#logo{
+  height: 7vh;
+  width: 3vw;
+  margin-left: 3rem;
+}
+
+.bg-dark{
+  transition: .4s ease;
+  background: transparent !important;
+}
+
+.bg-dark.scrolled{
+  background: #182028 !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  border-color: #fff;
+}
+
+/* HEADER */
+
+.header{
+  height: 100vh;
+  width: 100vw;
+  background-image: url("img/bg1.svg");
+  background-repeat: no-repeat;
+}
+
+#webcam{
+  height: 61vh;
+  width: 39vw;
+  transform: translate(10%,30%);
+  animation: 1s fadeinup forwards;
+  backface-visibility: hidden;
+}
+
+.home #heading{
+  transform: translateY(14rem);
+}
+
+.mainHeading{
+  font-size: 12rem;
+  color: #182028;
+  font-weight: 500;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  margin-bottom: 3rem;
+}
+
+#motto{
+  font-size: 3.6rem;
+  color: #888888;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+ }
+
+ .bounce {
+  animation : bounce 2s infinite 0.5s;
+ }
+
+
+ @keyframes bounce {
+ 	0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+   }
+ 	40% {
+    transform:translateY(-30px);
+   }
+ 	60% {
+    transform:translateY(-15px);
+   }
+ }
+
+ /* INTRODUCTION */
+
+ .subHeading{
+    font-size: 10rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    transition: all .2s;
+    letter-spacing: 0px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: white;
+ }
+ .subHeading1{
+  font-size: 10rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  transition: all .2s;
+  letter-spacing: 0px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  color: black;
+}
+
+ .subHeading:hover {
+    transform: skewY(5deg) skewX(5deg);
+}
+
+.introDetails{
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #888888;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  margin-bottom: 2rem;
+}
+
+/* PROBLEMS */
+
+.card{
+  border: none;
+}
+
+#probHeading{
+  font-size: 3.3rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+}
+
+#probAnswer{
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+/* ACHIEVEMENTS */
+
+.accolades{
+  font-size: 3.4rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.achievements p,li{
+  font-size: 1.8rem;
+}
+
+.translateText{
+  transform: translateX(12rem);
+}
+
+#trophy{
+  height: 50%;
+  width: 50%;
+}
+
+/* OUR TEAM */
+
+.ourTeam .card-title{
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.white{
+  color: #fff;
+}
+
+.ourTeam .card-img-top{
+  border-radius: 50%;
+}
+
+.ourTeam{
+  background-color: white;
+}
+.round{
+  background: transparent;
+}
+
+/* AFFILIATES */
+
+.imgFlex{
+  display: flex;
+  height: 38%;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#img1{
+  height: 20vh;
+  width: 8vw;
+  margin-bottom: 5rem;
+}
+
+#img2{
+  height: 20vh;
+  width: 20vw;
+  margin-bottom: 5rem;
+}
+
+#img3{
+  height: 20vh;
+  width: 20vw;
+  margin-bottom: 5rem;
+}
+
+#img4{
+  height: 20vh;
+  width: 12vw;
+  margin-bottom: 5rem;
+}
+
+/* FOOTER */
+
+.footer{
+  width: 100vw;
+  height: 45vh;
+  background-color: #182028;
+  position: relative;
+}
+
+.logo{
+  position: absolute;
+  top: 30%;
+  left: 3%;
+  height: 25%;
+  width: 5%;
+}
+
+.footer p{
+  font-size: 2.5rem;
+  position: absolute;
+  top: 60%;
+  left: 3%;
+  color: #fff;
+}
+.contact{
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  color: #fff;
+}
+
+.contact h2{
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact h3{
+  font-size: 2.1rem;
+}
+
+
+.social-links {
+    margin-bottom: 5px;
+}
+
+.social-links a {
+  position: relative;
+    display: inline-block;
+    margin: 15px 4px;
+    font-size: 1.8rem;
+    color: #fafafa;
+    background: #2B2B2B;
+    width: 4.2rem;
+    height: 4.2rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #111;
+    background-color: #fff;
+}
+
+.social-links a i {
+    line-height: 42px;
+}
+.social-links a img{
+  height: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 992px) {
+  #webcam{
+    width: 43vw;
+    height: 48vh;
+  }
+
+  .mainHeading{
+    font-size: 9rem;
+  }
+
+  #motto{
+    font-size: 2.8rem;
+  }
+
+  .header{
+    height: 80vh;
+  }
+
+  .subHeading1{
+    font-size: 7rem;
+  }
+
+  .introDetails{
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    overflow-x: hidden;
+  }
+
+  .accolades{
+    font-size: 2.1rem;
+  }
+
+  .achievements p,li{
+    font-size: 1.3rem;
+  }
+
+  .translateText{
+    transform: translateX(8rem);
+  }
+
+  #logo{
+    height: 8vh;
+    width: 4.2vw;
+    margin-left: 3rem;
+  }
+
+  .navbar .nav-link{
+    font-size: 1.42rem;
+  }
+
+  #img1{
+    height: 16vh;
+    width: 7vw;
+  }
+
+  #img2{
+    height: 12vh;
+    width: 18vw;
+  }
+
+  #img3{
+    height: 17vh;
+    width: 20vw;
+  }
+
+  #img4{
+    height: 15vh;
+    width: 12vw;
+  }
+
+  .logo{
+    height: 20%;
+  }
+
+}
+
+@media (max-width: 768px ) {
+  .navbar .nav-link{
+    font-size: 1.3rem;
+    color: #fff;
+  }
+
+  .bg-dark{
+    background: #182028 !important;
+  }
+
+  #webcam{
+    width: 46vw;
+    height: 40vh;
+    margin-top: 5rem;
+  }
+
+  .navbar{
+    margin-bottom: 0rem;
+  }
+
+  .header{
+    height: 70vh;
+    background: none;
+  }
+
+  .mainHeading{
+    font-size: 7.5rem;
+  }
+
+  #motto{
+    font-size: 2.4rem;
+  }
+
+  .subHeading1{
+    font-size: 5.5rem;
+  }
+
+  .introDetails{
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .accolades{
+    font-size: 2.7rem;
+  }
+
+  .achievements p,li{
+    font-size: 1.7rem;
+  }
+
+  .translateText{
+    transform: translateX(4rem);
+  }
+
+  #logo{
+    height: 6vh;
+    width: 4.2vw;
+    margin-left: 3rem;
+  }
+
+  .order1{
+    order: 1;
+  }
+
+  .order2{
+    order: 2;
+  }
+
+  #trophy{
+    height: 40vh;
+    margin-bottom: 3rem;
+  }
+
+  .logo{
+    position: absolute;
+    top: 20%;
+    left: 3%;
+    height: 15%;
+    width: 8%;
+  }
+
+  .footer p{
+    font-size: 1.7rem;
+    position: absolute;
+    top:45%;
+    left: 3%;
+    color: #fff;
+  }
+
+  .contact h2{
+    font-size: 2.3rem;
+  }
+
+  .contact h3{
+    font-size: 1.7rem;
+  }
+
+  #probHeading{
+    font-size: 2.5rem;
+  }
+
+  #probAnswer{
+    font-size: 1.7rem;
+  }
+}
+
+@media(max-width: 576px){
+  #webcam{
+    display: none;
+  }
+
+  .navbar .nav-link{
+    font-size: 1.4rem;
+    color: #fff;
+    text-align: center;
+  }
+
+  .navbar-nav{
+    margin-left: 0rem;
+  }
+
+  .nav-item{
+    padding-left: 0rem;
+  }
+
+  #logo{
+    height: 5vh;
+    width: 5vw;
+    margin-left: 3rem;
+  }
+
+  .mainHeading{
+    font-size: 9.5rem;
+  }
+
+  #motto{
+    font-size: 3.4rem;
+  }
+
+  .subHeading1{
+    font-size: 5rem;
+  }
+
+  .introDetails{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .accolades{
+    font-size: 2.5rem;
+  }
+
+  .achievements p,li{
+    font-size: 1.4rem;
+  }
+
+  .translateText{
+    transform: translateX(3rem);
+  }
+
+  iframe{
+    width: 80%;
+    height: 50vh;
+  }
+
+  #probHeading{
+    font-size: 2rem;
+  }
+
+  #probAnswer{
+    font-size: 1.5rem;
+  }
+
+  .problems .card{
+    margin-bottom: 3rem;
+  }
+
+}
+
+@media (max-width: 450px) {
+  .mainHeading{
+    font-size: 6.5rem;
+  }
+
+  #motto{
+    font-size: 2.4rem;
+  }
+
+  .subHeading1{
+    font-size: 4rem;
+  }
+
+  .introDetails{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .accolades{
+    font-size: 2.3rem;
+  }
+
+  .achievements p,li{
+    font-size: 1.3rem;
+  }
+
+  .translateText{
+    transform: translateX(0.3rem);
+  }
+
+  iframe{
+    width: 80%;
+    height: 30vh;
+  }
+
+  #probHeading{
+    font-size: 2rem;
+  }
+
+  #probAnswer{
+    font-size: 1.5rem;
+  }
+
+  #logo{
+    height: 6vh;
+    width: 8vw;
+    margin-left: 3rem;
+  }
+
+  #img1{
+    height: 10vh;
+    width: 7vw;
+  }
+
+  #img2{
+    height: 7vh;
+    width: 22vw;
+  }
+
+  #img3{
+    height: 12vh;
+    width: 20vw;
+  }
+
+  #img4{
+    height: 8vh;
+    width: 12vw;
+  }
+
+  .logo{
+    position: absolute;
+    top: 20%;
+    left: 6%;
+    height: 15%;
+    width: 8%;
+  }
+
+  .footer p{
+    font-size: 1.2rem;
+    position: absolute;
+    top:45%;
+    left: 5%;
+    color: #fff;
+    font-weight: 300;
+  }
+
+  .contact h2{
+    font-size: 1.7rem;
+    font-weight: 300;
+  }
+
+  .contact h3{
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+}
+
+/* KEYFRAMES */
+
+@keyframes fadeinup {
+  0%{
+    opacity: 0;
+    margin-top: 6rem;
+  }
+
+  100%{
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+#problems .card{
+  animation: 1s fadeinup forwards;
+  backface-visibility: hidden;
+}
+
+#ourTeam .card{
+  animation: 1s fadeinup forwards;
+  backface-visibility: hidden;
+}
